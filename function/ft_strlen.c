@@ -6,11 +6,11 @@
 /*   By: eelkabia <eelkabia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:59:45 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/21 19:43:59 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/10/22 12:02:59 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

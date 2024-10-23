@@ -6,11 +6,15 @@
 /*   By: eelkabia <eelkabia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:51:21 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/21 19:43:29 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/10/22 12:01:34 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	return (c >= 32 && c < 127);
+	if (c >= 32 && c < 127)
+		return (1);
+	return (0);
 }

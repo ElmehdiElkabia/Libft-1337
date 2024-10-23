@@ -6,9 +6,11 @@
 /*   By: eelkabia <eelkabia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 19:54:42 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/21 19:55:04 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/10/22 11:27:41 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
