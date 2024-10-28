@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:50:00 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/27 12:54:51 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/10/28 11:20:24 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,15 @@ static	size_t	count_word(char	*str, char c)
 	return (count);
 }
 
-static	void	ft_free(char **result, size_t word_index)
+static	char	**ft_free(char **result, size_t word_index)
 {
 	while (word_index > 0)
 	{
-		free(result[word_index]);
+		free(result[word_index - 1]);
 		word_index--;
 	}
 	free(result);
+	return (NULL);
 }
 
 static	char	*word(const char *s, size_t n)
@@ -74,10 +75,11 @@ static	char	**split_dup(char **result, const char *s, char c)
 				i++;
 			result[word_index] = word(s + start, i - start);
 			if (!result[word_index])
-				ft_free(result, word_index);
+				return (ft_free(result, word_index));
 			word_index++;
 		}
-		i++;
+		else
+			i++;
 	}
 	result[word_index] = NULL;
 	return (result);
@@ -87,7 +89,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	size_t	count;
-	size_t	i;
 
 	count = count_word((char *)s, c);
 	result = (char **)malloc(sizeof(char *) * (count + 1));
@@ -99,7 +100,7 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	char	*str = "elmehdi elkabia, hello elmehdi elkabia";
+// 	char	*str = "a,b,c,d,e,f,g,h,i,j";
 // 	char	c = ',';
 // 	char	**words = ft_split(str, c);
 // 	size_t	i = 0;
@@ -108,11 +109,9 @@ char	**ft_split(char const *s, char c)
 // 	{
 // 		while (words[i])
 // 		{
-// 			printf("%s\n", words[i]);
-// 			free(words[i]);
+// 			printf("%s", words[i]);
 // 			i++;
 // 		}
-// 		free(words);
 // 	}
 // 	return (0);
 // }

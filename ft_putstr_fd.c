@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:25:50 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/27 15:38:36 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/10/27 21:36:15 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	while (s[i])
 	{
-		write(fd, &s, 1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }
