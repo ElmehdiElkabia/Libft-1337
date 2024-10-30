@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:50:00 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/28 11:20:24 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/10/30 12:22:45 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,8 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	count;
 
+	if (!s)
+		return (0);
 	count = count_word((char *)s, c);
 	result = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!result)
@@ -97,21 +99,3 @@ char	**ft_split(char const *s, char c)
 	result = split_dup(result, s, c);
 	return (result);
 }
-
-// int	main(void)
-// {
-// 	char	*str = "a,b,c,d,e,f,g,h,i,j";
-// 	char	c = ',';
-// 	char	**words = ft_split(str, c);
-// 	size_t	i = 0;
-
-// 	if (words)
-// 	{
-// 		while (words[i])
-// 		{
-// 			printf("%s", words[i]);
-// 			i++;
-// 		}
-// 	}
-// 	return (0);
-// }
