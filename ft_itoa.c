@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 09:51:09 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/29 18:06:00 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:33:35 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,10 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	if (n == -2147483648)
+	{
+		free(str);
 		return (ft_strdup("-2147483648"));
+	}
 	str[len--] = '\0';
 	return (int_dup(str, n, len));
 }
