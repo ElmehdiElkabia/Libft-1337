@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 09:51:09 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/01 13:33:35 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:31:21 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,8 @@ static char	*int_dup(char	*str, int n, size_t len)
 char	*ft_itoa(int n)
 {
 	char		*str;
-	size_t		i;
 	size_t		len;
 
-	i = 0;
 	len = len_int(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
