@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:26:12 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/01 13:22:33 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:21:44 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 # include <stdio.h>
 # include <unistd.h>
 
-// typedef struct s_list
-// {
-// 	void	*content;
-// 	struct s_list	*next;
-// }	t_list;
+typedef struct s_list
+{
+	void	*content;
+	struct s_list	*next;
+}	t_list;
 
 void	ft_bzero(void *s, size_t n);
 void	ft_putstr_fd(char *s, int fd);
@@ -58,5 +58,7 @@ int		ft_memcmp(const void *s1, const void *s, size_t n);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+t_list  *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
