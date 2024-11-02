@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   libft_bonus.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 14:20:25 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/01 18:38:41 by eelkabia         ###   ########.fr       */
+/*   Created: 2024/11/01 20:13:20 by eelkabia          #+#    #+#             */
+/*   Updated: 2024/11/02 17:08:31 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_BONUS_H
+# define LIBFT_BONUS_H
 
-void	*ft_calloc(size_t count, size_t size)
+
+# include <stdlib.h>
+# include <stddef.h>
+# include <stdio.h>
+
+typedef struct s_list
 {
-	void	*p;
-	size_t	len;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
-	len = count * size;
-	p = (void *)malloc(len + 1);
-	if (p == NULL)
-		return (NULL);
-	ft_bzero(p, len);
-	return (p);
-}
+t_list  *ft_lstnew(void *content);
+void 	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+t_list	*ft_lstlast(t_list *lst);
+
+#endif
