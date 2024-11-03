@@ -6,11 +6,11 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:46:43 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/03 13:27:09 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/03 19:13:32 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

@@ -6,11 +6,11 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:29:22 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/03 13:36:23 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/03 19:13:32 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {

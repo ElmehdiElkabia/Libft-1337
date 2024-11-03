@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:26:12 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/03 13:25:02 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/03 19:19:08 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 void	ft_bzero(void *s, size_t n);
 void	ft_putstr_fd(char *s, int fd);
@@ -52,5 +58,15 @@ int		ft_memcmp(const void *s1, const void *s, size_t n);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+int		ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

@@ -6,11 +6,11 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:36:50 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/02 21:18:34 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/03 19:13:32 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

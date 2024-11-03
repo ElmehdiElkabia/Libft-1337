@@ -6,11 +6,11 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:52:35 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/03 17:05:40 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/03 19:15:59 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -18,9 +18,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*node;
 	t_list	*temp;
 
-	temp = *lst;
-	if (!lst || !f || !del)
+	temp = lst;
+	if (!lst || !f)
 		return (NULL);
+	list = NULL;
 	while (temp)
 	{
 		node = ft_lstnew(f(temp->content));
