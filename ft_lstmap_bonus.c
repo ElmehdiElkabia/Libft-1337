@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:52:35 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/03 19:15:59 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/03 19:20:33 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			return (NULL);
 		}
 		ft_lstadd_back(&list, node);
-        temp = temp->next;
+		temp = temp->next;
 	}
 	return (list);
 }
