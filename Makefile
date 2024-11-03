@@ -6,7 +6,7 @@
 #    By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/31 11:01:10 by eelkabia          #+#    #+#              #
-#    Updated: 2024/11/02 22:10:41 by eelkabia         ###   ########.fr        #
+#    Updated: 2024/11/03 13:20:15 by eelkabia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ FUNCTION = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 		ft_itoa.c ft_tolower.c ft_toupper.c ft_memcmp.c ft_memmove.c
 F_BONUS = ft_lstsize_bonus.c ft_lstadd_back_bonus.c \
 		ft_lstadd_front_bonus.c ft_lstnew_bonus.c \
-		ft_lstlast_bonus.c
+		ft_lstlast_bonus.c ft_lstdelone_bonus.c 
 OBJ = $(FUNCTION:.c=.o)
 OBJ_BONUS = $(F_BONUS:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:26:12 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/02 16:46:34 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/03 13:25:02 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
-
 
 void	ft_bzero(void *s, size_t n);
 void	ft_putstr_fd(char *s, int fd);
