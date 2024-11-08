@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:26:12 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/08 11:42:02 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:08:15 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define LIBFT_H
 
 // # include <fcntl.h>
-# include <stdint.h>
 # include <stddef.h>
+# include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -25,7 +25,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-//---------------------------------Libc functions---------------------------------//
+//-------------Libc functions--------------------//
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -50,7 +50,7 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 int					ft_atoi(const char *nptr);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s1);
-//---------------------------------Additional functions---------------------------------//
+//----------------Additional functions------------//
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
@@ -62,7 +62,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-//---------------------------------BONUS---------------------------------//
+///------------BONUS------------//
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
