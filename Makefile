@@ -6,12 +6,12 @@
 #    By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/31 11:01:10 by eelkabia          #+#    #+#              #
-#    Updated: 2024/11/03 21:12:59 by eelkabia         ###   ########.fr        #
+#    Updated: 2024/11/08 11:37:16 by eelkabia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -std=c99
+CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 FUNCTION = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 		ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c \
@@ -44,5 +44,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re bonus

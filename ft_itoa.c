@@ -6,15 +6,15 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 09:51:09 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/01 16:31:21 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:39:50 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	len_int(int n)
+static int	len_int(int n)
 {
-	size_t	r;
+	int	r;
 
 	r = 0;
 	if (n <= 0)
@@ -27,7 +27,7 @@ static size_t	len_int(int n)
 	return (r);
 }
 
-static char	*int_dup(char	*str, int n, size_t len)
+static char	*int_dup(char *str, int n, int len)
 {
 	if (n == 0)
 	{
@@ -49,8 +49,8 @@ static char	*int_dup(char	*str, int n, size_t len)
 
 char	*ft_itoa(int n)
 {
-	char		*str;
-	size_t		len;
+	char	*str;
+	int		len;
 
 	len = len_int(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
