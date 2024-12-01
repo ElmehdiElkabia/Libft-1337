@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:03:33 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/27 14:14:05 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:18:00 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 
 	i = 0;
+	if (!s1)
+		return (NULL);
 	len = ft_strlen(s1);
 	p = (char *)malloc(sizeof(char) * len + 1);
 	if (p == NULL)

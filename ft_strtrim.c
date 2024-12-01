@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:39:03 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/28 12:35:38 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:50:22 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	i = 0;
-	j = ft_strlen(s1);
 	if (!s1)
 		return (NULL);
+	j = ft_strlen(s1);
 	if (!set)
 		return (ft_strdup(s1));
 	while (s1[i] && ft_strchr(set, s1[i]))

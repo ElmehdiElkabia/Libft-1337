@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:29:22 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/04 09:33:37 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:39:55 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
 
+	if (!lst)
+		return ;
 	while (*lst)
 	{
 		temp = (*lst)->next;

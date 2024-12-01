@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:45:16 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/28 12:26:38 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:19:53 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	src_len;
 
 	i = 0;
-	src_len = ft_strlen(src);
 	if (!dst || !src)
 		return (0);
+	src_len = ft_strlen(src);
 	if (size == 0)
 		return (src_len);
 	while (src[i] && i < size - 1)

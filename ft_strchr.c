@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:45:23 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/10/28 12:01:18 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:17:48 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

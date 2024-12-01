@@ -6,7 +6,7 @@
 #    By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/31 11:01:10 by eelkabia          #+#    #+#              #
-#    Updated: 2024/11/08 11:37:16 by eelkabia         ###   ########.fr        #
+#    Updated: 2024/11/12 20:46:34 by eelkabia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,10 +29,10 @@ OBJ_BONUS = $(F_BONUS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(OBJ_BONUS)
-	ar rcs $(NAME) $(OBJ_BONUS)
+bonus: $(OBJ_BONUS)
+	ar rc $(NAME) $(OBJ_BONUS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

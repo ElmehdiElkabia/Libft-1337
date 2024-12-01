@@ -6,7 +6,7 @@
 /*   By: eelkabia <eelkabia@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:37:08 by eelkabia          #+#    #+#             */
-/*   Updated: 2024/11/07 14:22:52 by eelkabia         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:40:14 by eelkabia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*temp;
 
+	if (!lst || !f)
+		return ;
 	temp = lst;
 	while (temp)
 	{
